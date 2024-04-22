@@ -2,5 +2,6 @@ from django.urls import path
 from.import views
 
 urlpatterns = [
-    path('',views.add,name="add"),
+    path('',views.index,name="index"),
+     path('/insert',views.insertData,name="insertData"),
 ]
