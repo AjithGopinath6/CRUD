@@ -24,42 +24,36 @@
       <div class="row">
 
         <div class="col-md-4">
-          <h2 class="text-white bg-dark text-center p-4">Insert Student Details</h2>
+          <h2 class="text-white bg-dark text-center p-3">Insert Student Details</h2>
 
-          <br>
-          <form action="/insert" method="post">{% csrf_token %}
-            <div class="form-group">
-
-              <input type="text" class="form-control" placeholder="enter student name" required>
-            </div><br>
-            <div class="form-group">
-            <input type="email" class="form-control" placeholder="enter student email" mt-3>
-          </div><br>
-          <div class="form-group">
-          <input type="number" class="form-control" placeholder=" enter student age" mt-2>
-           </div><br>
-           <div class="form-group">
-            <label for="gender">Gender</label>
-           <select class="form-select" aria-label="select gender">
-            <option selected>select Gender</option>
-            <option value="1">male</option>
-            <option value="2">female</option>
-            <option value="3">others</option>
-          </select>
-           </div>
-          </form><br>
-          <div class="d-grid gap-2">
-            <button class="btn btn-primary" type="button">Button</button>
-          </div>
-        </form>
-
-        </div>
-        <div class="col-md-8">
           
+          <form action="/insertData" method="post"> {% csrf_token %}
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="enter student name" name="name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" placeholder="enter student email" name="email" mt-3>
+            </div>
+           <div class="form-group">
+            <input type="number" class="form-control" placeholder=" enter student age" name="age" mt-2>
+           </div>
+           <div class="form-group">
+              <label for="gender">Gender</label>
+              <select class="form-select" id="gender" name="gender">
+                <option selected>select Gender</option>
+                <option value="1">male</option>
+                <option value="2">female</option>
+                <option value="3">others</option>
+              </select>
+           </div>
+         
+            <div class="d-grid gap-2">
+              <button class="btn btn-success" type="submit" >Submit</button>
+            </div>
+          </form>
+
         </div>
       </div>
-
-
     </div>
     
      
