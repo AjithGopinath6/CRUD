@@ -27,7 +27,7 @@
           <h2 class="text-white bg-info text-center p-3">update Student Details</h2>
 
           
-          <form action="/updateData/{{d.id}}" method="post"> {% csrf_token %}
+          <form action="/updatedata/{{d.id}}" method="post"> {% csrf_token %}
             <div class="form-group">
               <input type="text" class="form-control" placeholder="enter student name" name="name" value ="{{d.name}}" required>
             </div>
