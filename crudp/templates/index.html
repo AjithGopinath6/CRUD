@@ -28,16 +28,16 @@
 
           
           <form action="/insertData" method="post"> {% csrf_token %}
-            <div class="form-group">
+            <div class="form-group mb-3">
               <input type="text" class="form-control" placeholder="enter student name" name="name" required>
             </div>
-            <div class="form-group">
+            <div class="form-group mb-3">
               <input type="email" class="form-control" placeholder="enter student email" name="email" mt-3>
             </div>
-           <div class="form-group">
+           <div class="form-group mb-3">
             <input type="number" class="form-control" placeholder=" enter student age" name="age" mt-2>
            </div>
-           <div class="form-group">
+           <div class="form-group mb-3">
               <label for="gender">Gender</label>
               <select class="form-select" id="gender" name="gender">
                 <option selected>select Gender</option>
@@ -47,7 +47,7 @@
               </select>
            </div>
          
-            <div class="d-grid gap-2">
+            <div class="d-grid gap-2 mb-3">
               <button class="btn btn-success" type="submit" >Submit</button>
             </div>
           </form>
