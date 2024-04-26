@@ -51,7 +51,33 @@
               <button class="btn btn-success" type="submit" >Submit</button>
             </div>
           </form>
-
+        </div>
+        <div class="col-md-8">
+         <h2 class="text-center text-white bg-dark p-3"> student deatils </details></h2>
+         <table class="table table-dark">
+          <thead>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Age</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+          </thead>
+          <tbody>
+          {% for d in data %}
+            <tr>
+              <th>{{d.id}}</th>
+              <th>{{d.name}}</th>
+              <th>{{d.email}}</th>
+              <th>{{d.age}}</th>
+              <th>{{d.gender}}</th>
+              <th><a type="button" href="/update{{d.id}}" class="btn btn-primary">Edit</a></th>
+              <th><a type="button" href="/delete{{d.id}}" class="btn btn-danger">Delete</a></th>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
         </div>
       </div>
     </div>

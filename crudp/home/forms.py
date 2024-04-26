@@ -1,8 +1,8 @@
 from django import forms
-from.models import user
+from.models import student
 
 class students (forms.ModelForm):
     class meta:
-        model = user
-        fields = ['name','email','password']
+        model = student
+        fields = ['name','email','age','gender']
 
